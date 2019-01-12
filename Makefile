@@ -1,18 +1,18 @@
-BOARD := "arduino:avr:uno"
+BOARD := "adafruit:avr:trinket5"
 PORT := "/dev/tty.wchusbserial1430"
 
 .PHONY: compile
 
-compile: rfid_unlock.ino
+compile:
 	arduino-cli compile --fqbn $(BOARD) .
 
 .PHONY: upload
 
-upload:
-	test -e $(PORT) || { echo "Port not found!"; exit 1; }
-	$(MAKE) compile
+upload: compile
+#	test -e $(PORT) || { echo "Port not found!"; exit 1; }
+#	$(MAKE) compile
 
-	arduino-cli upload  --fqbn $(BOARD) -p $(PORT) .
+	arduino-cli upload  --fqbn $(BOARD) . # -p $(PORT) .
 
 .PHONY: clean
 
