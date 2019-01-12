@@ -1,8 +1,8 @@
 // Christmas mode
-#define CHRISTMAS
+//#define CHRISTMAS
 
 // American mode
-//#define AMERICAN
+#define AMERICAN
 
 // Custom mode
 //#define CUSTOM
