@@ -2,6 +2,9 @@ language: c
 sudo: false
 before_install:
   - source <(curl -SLs https://raw.githubusercontent.com/sconaway/travis-arduino/master/travis.sh)
+install:
+  - arduino-cli lib update-index
+  - arduino-cli lib install "Adafruit NeoPixel Library"
 script: make
 notifications:
   email:
