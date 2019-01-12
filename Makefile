@@ -1,4 +1,4 @@
-BOARD := "adafruit:avr:trinket5"
+BOARD := "adafruit:avr:trinket3"
 PORT := "/dev/tty.wchusbserial1430"
 
 .PHONY: compile
