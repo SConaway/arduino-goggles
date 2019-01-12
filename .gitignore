@@ -1,0 +1,6 @@
+*.elf
+*.hex
+.DS_Store
+*/.DS_Store
+
+*.gch
