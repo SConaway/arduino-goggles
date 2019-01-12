@@ -10,9 +10,9 @@ compile:
 
 upload: compile
 #	test -e $(PORT) || { echo "Port not found!"; exit 1; }
-#	$(MAKE) compile
+	$(MAKE) compile
 
-	arduino-cli upload  --fqbn $(BOARD) . # -p $(PORT) .
+	arduino-cli upload  --fqbn $(BOARD) -p $(PORT) .
 
 .PHONY: clean
 

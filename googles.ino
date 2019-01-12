@@ -9,6 +9,8 @@
 #include "config.h"
 #include "colors.h"
 
+
+
 #define PIN 0
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(32, PIN);
@@ -56,7 +58,11 @@ void loop() {
   }
 
   t = millis();
+ #ifndef DEBUG
   if ((t - prevTime) > 8000) {     // Every 8 seconds...
+ #else
+  if ((t - prevTime) > 2000) {     // Every 2 seconds...
+ #endif
     mode++;                        // Next mode
     if (mode > 1) {                // End of modes?
       mode = 0;                    // Start modes over
@@ -67,20 +73,20 @@ void loop() {
 
 #if NUMCOLORS==2
       if(color == COLOR1) color = COLOR2;
-      if(color == COLOR2) color = COLOR1;
+      else if(color == COLOR2) color = COLOR1;
 #endif
 
 #if NUMCOLORS==3
       if(color == COLOR1) color = COLOR2;
-      if(color == COLOR2) color = COLOR3;
-      if(color == COLOR3) color = COLOR1;
+      else if(color == COLOR2) color = COLOR3;
+      else if(color == COLOR3) color = COLOR1;
 #endif
 
 #if NUMCOLORS==4
       if(color == COLOR1) color = COLOR2;
-      if(color == COLOR2) color = COLOR3;
-      if(color == COLOR3) color = COLOR4;
-      if(color == COLOR4) color = COLOR1;
+      else if(color == COLOR2) color = COLOR3;
+      else if(color == COLOR3) color = COLOR4;
+      else if(color == COLOR4) color = COLOR1;
 #endif
     }
 
