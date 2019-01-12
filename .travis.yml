@@ -1,7 +1,7 @@
 language: c
 sudo: false
 before_install:
-  - source <(curl -SLs https://raw.githubusercontent.com/sconaway/travis-arduino/master/install.sh)
+  - source <(curl -SLs https://raw.githubusercontent.com/sconaway/travis-arduino/master/travis.sh)
 script:
   - arduino-cli compile --fqbn adafruit:avr:trinket5 .
 notifications:
