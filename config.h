@@ -2,7 +2,10 @@
 //#define CHRISTMAS
 
 // American mode
-#define AMERICAN
+//#define AMERICAN
+
+// Halloween mode
+#define HALLOWEEN
 
 // Custom mode
 //#define CUSTOM
