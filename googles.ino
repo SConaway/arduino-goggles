@@ -17,7 +17,7 @@ Adafruit_NeoPixel pixels = Adafruit_NeoPixel(32, PIN);
 
 uint8_t   mode   = 0, // Current animation effect
           offset = 0; // Position of spinny eyes
-uint32_t  color = COLOR1, // No Color/Black
+uint32_t  color = COLOR1, 
           prevTime;
 
 void setup() {
