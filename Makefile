@@ -3,8 +3,8 @@ PORT := "/dev/tty.wchusbserial1430"
 
 .PHONY: compile
 
-compile:
-	arduino-cli compile --fqbn $(BOARD) .
+compile: goggles
+	arduino-cli compile --fqbn $(BOARD) goggles
 
 .PHONY: upload
 
